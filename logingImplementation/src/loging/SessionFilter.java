@@ -73,13 +73,13 @@ public class SessionFilter implements Filter {
 			
 			if (!loginValidationCheck) {
 				//System.out.println("filter second if entered");
-				res.sendRedirect("login.html");
+				res.sendRedirect("login");
 			}
 			else{
 				chain.doFilter(request, response);
 			}
 		}
-		else if(temp.equals("login.html") && loginValidationCheck){
+		else if(temp.equals("login") && loginValidationCheck){
 			res.sendRedirect("dashboard");
 		}
 		else{
