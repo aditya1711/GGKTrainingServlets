@@ -32,12 +32,14 @@
 		<%
 			if(active.size()>0){
 				for(int i=0;i< active.size();i++){
-					out.print("<tr>");
-					out.print("<td>" + active.get(i)[0] + "</td");
-					out.print("<td>" + active.get(i)[1] + "</td>");
-					out.print("<td>" + active.get(i)[2] + "</td>");
-					out.print("<td>" + active.get(i)[3] + "</td>");
-					out.print("</tr>");
+					%>
+					<tr>
+						<td> <%= active.get(i)[0] %> </td>
+						<td> <%= active.get(i)[1] %> </td>
+						<td> <%= active.get(i)[2] %> </td>
+						<td> <%= active.get(i)[3] %> </td>
+					</tr>
+					<%
 				}
 			}
 			
@@ -58,12 +60,14 @@
 		<%
 			if(inActive.size()>0){
 				for(int i=0;i< inActive.size();i++){
-					out.print("<tr>");
-					out.print("<td>" + inActive.get(i)[0] + "</td");
-					out.print("<td>" + inActive.get(i)[1] + "</td>");
-					out.print("<td>" + inActive.get(i)[2] + "</td>");
-					out.print("<td>" + inActive.get(i)[3] + "</td>");
-					out.print("</tr>");
+					%>
+					<tr>
+						<td> <%= inActive.get(i)[0] %> </td>
+						<td> <%= inActive.get(i)[1] %> </td>
+						<td> <%= inActive.get(i)[2] %> </td>
+						<td> <%= inActive.get(i)[3] %> </td>
+					</tr>
+					<%
 				}
 			}
 			
