@@ -59,7 +59,7 @@ public class SessionFilter implements Filter {
 		
 		
 		
-		if (!(temp.equals("login.html") || temp.equals("LogingValidation") || temp.equals("invalid.html") || temp.equals("UserDisplay"))) {
+		if (!(temp.equals("login") || temp.equals("LogingValidation") || temp.equals("invalid.html") || temp.equals("UserDisplay") || temp.equals("login.jsp"))) {
 			
 			//System.out.println("filter first if entered");
 			

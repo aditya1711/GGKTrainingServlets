@@ -2,12 +2,9 @@ package loging;
 
 import java.io.IOException;
 import java.util.HashMap;
-
+import javax.servlet.http.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
 /**
@@ -69,6 +66,7 @@ public class LogingValidation extends HttpServlet {
 	    	users.put(user.getUsername(), user);
 
 			request.getSession().setAttribute("user", user);
+			response.addCookie(new Cookie("username", user.getUsername()));
 			
 			response.sendRedirect("dashboard");
 		}
