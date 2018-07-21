@@ -41,6 +41,9 @@ public class RequestListner implements ServletRequestListener {
     	//HashMap<String, User> users = (HashMap<String,User>)(context.getAttribute("users"));
     	HttpServletRequest req = (HttpServletRequest)(arg0.getServletRequest());
     	User u = (User)(req.getSession().getAttribute("user"));
+    	if(u == (req.getSession().getAttribute("user"))){
+    		System.out.println("equall");
+    	}
     	if(u!=null)
     		u.oneMoreRequest();
     		if(req.getParameter("error")!=null &&  !req.getParameter("error").equals("0")){
